@@ -1,12 +1,4 @@
 /**
- * @file watchlist.js
- * @description Simplest version of a game-tracking class. Keeps a list of
- * watched games in localStorage and can check the RAWG API to see if a
- * game's rating has changed since it was added.
- * @version 1.0.0
- */
-
-/**
  * Watchlist Class
  * @class
  * @property {string} rootId - the id of the html element to display the list in
