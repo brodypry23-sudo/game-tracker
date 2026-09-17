@@ -1,10 +1,3 @@
-/**
- * @file app.js
- * @description Wires up the search form and the watchlist for the
- * simple Game Tracker app. Handles all calls to the RAWG API.
- * @version 1.0.0
- */
-
 // TODO: replace with your own free key from https://rawg.io/apidocs
 const API_KEY = '66abf4abcebd4f11a78d80ba8f0415f0';
 const API_BASE = 'https://api.rawg.io/api';
