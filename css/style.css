@@ -1,0 +1,129 @@
+:root {
+  --ink: #0c0c0c;
+  --paper: #c3ddd3;
+  --grey-bg: #1b803d;
+  --grey-line: #020303;
+  --grey-text: #555555;
+  --error: #b00020;
+}
+
+/* ===== BASE ===== */
+body {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* ===== HEADER AND TABS ===== */
+.site-header {
+  background: var(--grey-bg);
+  border-bottom: 2px solid var(--ink);
+  padding: 1rem 0;
+}
+
+.site-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.tab {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tab.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.tab:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* ===== PANELS ===== */
+.panel {
+  border: 1px solid var(--grey-line);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--grey-line);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== FORM ===== */
+.form-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ===== MESSAGES ===== */
+.hint {
+  font-size: 0.8rem;
+  color: var(--grey-text);
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: var(--error);
+  min-height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  min-height: 1.5rem;
+  font-weight: 600;
+}
+
+/* ===== EMPTY BOXES ===== */
+.empty-box {
+  border: 1px dashed var(--grey-line);
+  background: var(--grey-bg);
+  color: var(--grey-text);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 1.5rem;
+}
+
+/* ===== ROWS ===== */
+.row-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--grey-line);
+  background: var(--grey-bg);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.row-item .cover-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.row-item .row-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ===== CHART ===== */
+canvas {
+  max-width: 100%;
+}
