@@ -20,15 +20,46 @@
 
   <main class="container my-4">
 
-    <!-- ===== STATUS ===== -->
+  <!-- ===== STATUS ===== -->
+  <p id="status-msg" class="status" role="status" aria-live="polite"></p>
 
-    <!-- ===== SEARCH ===== -->
+  <!-- ===== SEARCH ===== -->
+  <section class="panel" aria-labelledby="search-heading">
+    <h2 id="search-heading">Search for a game</h2>
+    <form id="search-form" novalidate>
+      <label for="search-input" class="form-label">Game name <span aria-hidden="true">*</span></label>
+      <input id="search-input" class="form-control" type="text" maxlength="40"
+             placeholder="Game name" aria-describedby="search-hint search-error" autocomplete="off">
+      <p id="search-hint" class="hint">Required, 2&ndash;40 characters</p>
+      <p id="search-error" class="error-text" role="alert"></p>
+      <button type="submit" class="btn btn-dark">Search</button>
+    </form>
+  </section>
 
-    <!-- ===== RESULTS ===== -->
+  <!-- ===== RESULTS ===== -->
+  <section class="panel" aria-labelledby="results-heading">
+    <h2 id="results-heading">Search results</h2>
+    <ul id="results" class="list-unstyled mb-0">
+      <li class="empty-box">No search results</li>
+    </ul>
+  </section>
 
-    <!-- ===== WATCHLIST ===== -->
+  <!-- ===== WATCHLIST ===== -->
+  <section class="panel" aria-labelledby="watchlist-heading">
+    <h2 id="watchlist-heading">My watchlist</h2>
+    <button id="check-updates-btn" type="button" class="btn btn-outline-dark btn-sm mb-3">Check for Updates</button>
+    <ul id="watchlist" class="list-unstyled mb-0">
+      <li class="empty-box">Your watchlist is empty</li>
+    </ul>
+  </section>
 
-    <!-- ===== PLAYERS ===== -->
+  <!-- ===== PLAYERS ===== -->
+  <section class="panel" aria-labelledby="players-heading">
+    <h2 id="players-heading">Players online now</h2>
+    <p class="hint">Live player totals provided by Steam.</p>
+    <canvas id="player-chart" role="img" aria-label="Bar chart of players online now for each game on your watchlist"></canvas>
+    <ul id="player-list" class="hint"></ul>
+  </section>
 
   </main>
 
